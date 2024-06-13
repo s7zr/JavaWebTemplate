@@ -14,7 +14,6 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
 @MapperScan("org.example.mapper")//扫描mapper接口，生成代理对象，并被ioc容器管理
 public class BackendApp {
-
     public static void main(String[] args) {
         SpringApplication.run(BackendApp.class, args);
     }
