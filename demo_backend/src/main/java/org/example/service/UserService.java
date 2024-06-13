@@ -3,6 +3,8 @@ package org.example.service;
 import org.example.pojo.entity.SysUser;
 import org.example.vo.resp.R;
 
+import java.util.Map;
+
 /**
  * @author mmj
  * @Description
@@ -15,4 +17,9 @@ public interface UserService{
      * @return
      */
     R<SysUser> getUserByUserName(String userName);
+    /**
+     * 登录校验码生成服务方法
+     * @return
+     */
+    R<Map> getCaptchaCode();
 }

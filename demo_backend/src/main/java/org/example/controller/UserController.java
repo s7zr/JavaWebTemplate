@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 /**
  * @author mmj
  * @Description test
@@ -38,4 +40,15 @@ public class UserController {
     public R<SysUser> getUserByUserName(@PathVariable("userName") String userName){
         return userService.getUserByUserName(userName);
     }
+
+    /**
+     * 生成登录校验码的访问接口
+     * @return
+     */
+    @ApiOperation("获取验证码接口")
+    @GetMapping("/captcha")
+    public R<Map> getCaptchaCode(){
+        return userService.getCaptchaCode();
+    }
+
 }
