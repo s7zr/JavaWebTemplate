@@ -43,6 +43,30 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
         </dependency>
+<!--        与hutool工具类生成二维码有关的类，解析多种格式的1D/2D条形码-->
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.3.3</version>
+        </dependency>
+<!--        通用SDK-->
+        <dependency>
+            <groupId>com.alipay.sdk</groupId>
+            <artifactId>alipay-sdk-java</artifactId>
+            <version>4.34.43.ALL</version>
+        </dependency>
+<!--        easy版sdk-->
+        <dependency>
+            <groupId>com.alipay.sdk</groupId>
+            <artifactId>alipay-easysdk</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+<!--        微信支付v2版本-->
+        <dependency>
+            <groupId>com.github.tedzhdz</groupId>
+            <artifactId>wxpay-sdk</artifactId>
+            <version>3.0.10</version>
+        </dependency>
     </dependencies>
     <build>
         <!--打包名称-->

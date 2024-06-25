@@ -1,6 +1,8 @@
 package org.example.service;
 
 import org.example.pojo.entity.SysUser;
+import org.example.vo.req.LoginReqVo;
+import org.example.vo.resp.LoginRespVo;
 import org.example.vo.resp.R;
 
 import java.util.Map;
@@ -22,4 +24,5 @@ public interface UserService{
      * @return
      */
     R<Map> getCaptchaCode();
+
 }

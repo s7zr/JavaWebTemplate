@@ -6,12 +6,11 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.example.pojo.entity.SysUser;
 import org.example.service.UserService;
+import org.example.vo.req.LoginReqVo;
+import org.example.vo.resp.LoginRespVo;
 import org.example.vo.resp.R;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -40,6 +39,17 @@ public class UserController {
     public R<SysUser> getUserByUserName(@PathVariable("userName") String userName){
         return userService.getUserByUserName(userName);
     }
+//    /**
+//     * 用户登录功能实现
+//     * @param vo
+//     * @return
+//     */
+//    @ApiOperation("用户登录功能接口")
+//    @PostMapping("/login")
+//    public R<LoginRespVo> login(@RequestBody LoginReqVo vo){
+//        R<LoginRespVo> r= userService.login(vo);
+//        return r;
+//    }
 
     /**
      * 生成登录校验码的访问接口
